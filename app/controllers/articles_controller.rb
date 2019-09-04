@@ -1,13 +1,16 @@
 class ArticlesController < ApplicationController
 
+  #get all articles
   def index
     @articles = Article.all
   end
 
+  #create new article
   def new
     @article = Article.new
   end
 
+  #get on e article by id
   def show
     @article = Article.find(params[:id])
   end
@@ -26,6 +29,7 @@ class ArticlesController < ApplicationController
     end
   end
 
+  #delete an article
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
