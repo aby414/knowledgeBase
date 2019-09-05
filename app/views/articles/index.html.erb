@@ -3,8 +3,7 @@
 <%= link_to "Create article", new_article_path(@article), :class => 'btn btn-primary' %>
 <% @articles.each do |article| %>
     <div class="card card-body bg-light">
-      <h3> <%= article.title %></h3>
-      <p><%= article.body %></p>
-      <%= link_to "Read More", article_path(article), :class => 'btn btn-default'%>
+      <h4> <%= article.title %></h4>
+      <%= link_to "View article", article_path(article), :class => 'btn btn-default'%>
     </div>
 <% end %>

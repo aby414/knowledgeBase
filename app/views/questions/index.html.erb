@@ -3,8 +3,9 @@
 <%= link_to "Create question", new_question_path(@question), :class => 'btn btn-primary' %>
 <% @questions.each do |question| %>
   <div class="card card-body bg-light">
-    <p><%= question.title %></p>
-    <%= link_to "Read More", question_path(question), :class => 'btn btn-default'%>
+    <h4><%= question.title%></h4>
+    <p><%= question.answer %></p>
+    <%= link_to "Edit", question_path(question), :class => 'btn btn-default'%>
   </div>
 <% end %>
 
