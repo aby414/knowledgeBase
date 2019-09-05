@@ -21,8 +21,8 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-
     if (@article.update(article_params))
+      @article.update_attribute(:body,translate_to_ger(params[:article][:body]))
       redirect_to @article
     else
       render 'new'
@@ -55,7 +55,12 @@ class ArticlesController < ApplicationController
   #translate text to german
   # source: https://github.com/MicrosoftTranslator/Text-Translation-API-V3-Ruby/blob/master/Translate.rb
   private def translate_to_ger(text)
-    subscription_key = ''
+
+    if (!ENV["TRANSLATOR_TEXT_SUBSCRIPTION_KEY"])
+      raise "Please set/export the following environment variable: TRANSLATOR_TEXT_SUBSCRIPTION_KEY"
+    else
+      subscription_key = ENV["TRANSLATOR_TEXT_SUBSCRIPTION_KEY"]
+    end
     endpoint = 'https://api.cognitive.microsofttranslator.com/translate?api-version=3.0'
 
     #translate to German

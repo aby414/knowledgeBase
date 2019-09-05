@@ -13,7 +13,6 @@ the "Create question" button on the page.
 
 
 
-
 Things you may want to cover:
 
 * Ruby version
@@ -33,3 +32,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+Set enviroment variable TRANSLATOR_TEXT_SUBSCRIPTION_KEY with your Microsoft translator key
