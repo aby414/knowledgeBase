@@ -55,7 +55,7 @@ class ArticlesController < ApplicationController
   #translate text to german
   # source: https://github.com/MicrosoftTranslator/Text-Translation-API-V3-Ruby/blob/master/Translate.rb
   private def translate_to_ger(text)
-    subscription_key = $ms_secret_key
+    subscription_key = ''
     endpoint = 'https://api.cognitive.microsofttranslator.com/translate?api-version=3.0'
 
     #translate to German
