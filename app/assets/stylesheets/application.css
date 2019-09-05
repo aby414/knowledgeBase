@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+/*Add space between navbar items*/
+.navbar-nav > li{
+    padding-left:0px;
+    padding-right:30px;
+}
