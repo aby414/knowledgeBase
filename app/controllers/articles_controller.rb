@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     if (@article.update(article_params))
-      @article.update_attribute(:body,translate_to_ger(params[:article][:body]))
+      @article.update_attribute(:body, translate_to_ger(params[:article][:body]))
       redirect_to @article
     else
       render 'new'
@@ -84,7 +84,14 @@ class ArticlesController < ApplicationController
     result = response.body.force_encoding("utf-8")
 
     json_result = JSON.parse(result)
-    trans_res = json_result[0]['translations'][0]['text']
+
+    begin
+      trans_res = json_result[0]['translations'][0]['text']
+    rescue *Exception => e
+      puts e
+    end
+
     return trans_res
   end
+
 end
