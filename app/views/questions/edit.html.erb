@@ -1,5 +1,5 @@
 <h1>Edit question</h1>
-<%= form_for :question, url: questions_path(@article), method: :patch do |f| %>
+<%= form_for :question, url: question_path(@question), method: :patch do |f| %>
   <% if @question.errors.any? %>
     <%@question.errors.full_messages.each  do |msg| %>
       <div class="alert alert-danger"><%= msg %></div>

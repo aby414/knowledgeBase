@@ -9,7 +9,11 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    @question =Question.find_by(params[:id])
+    @question =Question.find(params[:id])
+  end
+
+  def edit
+    @question = Question.find(params[:id])
   end
 
   def update

@@ -5,12 +5,12 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
-  #create new article
+
   def new
     @article = Article.new
   end
 
-  #get on e article by id
+
   def show
     @article = Article.find(params[:id])
   end
@@ -52,7 +52,7 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :body)
   end
 
-  #translate text to german
+  #translate text to German
   # source: https://github.com/MicrosoftTranslator/Text-Translation-API-V3-Ruby/blob/master/Translate.rb
   private def translate_to_ger(text)
 
