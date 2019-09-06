@@ -9,7 +9,7 @@ Articles are only listed by their title. Click "*View article*" to get the full 
 Here you can also edit and delete an article.
 
 The FAQ section contains all added questions. To add a question just go to FAQ in the navigation bar and click 
-the "*Create question*" button on the page. The fields title and answer require values.
+the "*Create question*" button on the page. The fields *title* and *answer* require values.
 
 
 # Getting started
