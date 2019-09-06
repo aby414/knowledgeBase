@@ -30,8 +30,3 @@ Set the enviroment variable `TRANSLATOR_TEXT_SUBSCRIPTION_KEY` with your Microso
 * Ruby version: 2.6.3
 
 * Rails version: 6.0.0
-
-* ...
-
-To use this application you need to have a MS Translate secret key!
-Set the enviroment variable TRANSLATOR_TEXT_SUBSCRIPTION_KEY with your Microsoft translator key
