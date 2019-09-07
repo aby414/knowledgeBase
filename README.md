@@ -22,6 +22,7 @@ Set the enviroment variable `TRANSLATOR_TEXT_SUBSCRIPTION_KEY` with your Microso
 - `bundle install` to install all req'd dependencies
 - `rake db:migrate` to make all database migrations
 - `rails s` to start the local server
+- open localhost:3000 in your browser
 
 
 
