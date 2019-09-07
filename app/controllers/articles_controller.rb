@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
       @article.update_attribute(:body, translate_to_ger(params[:article][:body]))
       redirect_to @article
     else
-      render 'new'
+      render 'edit'
     end
   end
 
@@ -43,7 +43,7 @@ class ArticlesController < ApplicationController
     if (@article.save)
       redirect_to @article
     else
-      render 'edit'
+      render 'new'
     end
 
   end

@@ -22,7 +22,7 @@ class QuestionsController < ApplicationController
     if(@question.update(question_params))
       redirect_to @question
     else
-      render 'new'
+      render 'edit'
     end
   end
 
@@ -39,7 +39,7 @@ class QuestionsController < ApplicationController
     if(@question.save)
       redirect_to @question
     else
-      render 'edit'
+      render 'new'
     end
   end
 
